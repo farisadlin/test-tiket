@@ -1,0 +1,80 @@
+html, body {
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  background: black;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  border: none;
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  border: 1px solid white;
+}
+
+.square:hover {
+  background-color: #d6d6d6;
+  cursor: pointer;
+}
+
+.square img {
+  height: 70px;
+  width: 70px;
+  fill: white !important;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 24px;
+  background: black;
+  padding: 20px;
+}
+
+.player-score span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 20px 10px 20px;
+}
+
+.player-score span:nth-child(1) {
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 480px) {
+  .square {
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  }
+
+  .square img {
+  height: 40px;
+  width: 40px;
+  }
+
+  .scoreboard {
+  font-size: 18px;
+  }
+
+}
