@@ -52,7 +52,7 @@ const App = () => {
   };
 
   const checkForTie = () => {
-    if (!squares.includes(null)) {
+    if (!squares.includes(null) && !calculateWinner(squares)) {
       setTieScore(tieScore + 1);
       resetGame();
     }
