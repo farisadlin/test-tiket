@@ -37,7 +37,6 @@ const App = () => {
     newSquares[i] = currentPlayer;
     setSquares(newSquares);
     setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
-    localStorage.setItem('squares', JSON.stringify(newSquares));
   }, [currentPlayer, squares, calculateWinner]);
 
   const checkForWinner = () => {
@@ -70,13 +69,6 @@ const App = () => {
     checkForTie();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [squares]);
-
-  useEffect(() => {
-    const squares = JSON.parse(localStorage.getItem('squares'));
-    if (squares) {
-      setSquares(squares);
-    }
-  }, []);
 
   useEffect(() => {
     const player1Score = localStorage.getItem('player1Score');
