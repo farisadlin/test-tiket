@@ -61,7 +61,6 @@ const App = () => {
   const resetGame = () => {
     setSquares(Array(9).fill(null));
     setCurrentPlayer('X');
-    localStorage.removeItem('squares');
   };
 
   useEffect(() => {
